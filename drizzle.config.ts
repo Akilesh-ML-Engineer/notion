@@ -11,8 +11,8 @@ export default defineConfig({
   dialect: "postgresql",
   schema: "./src/lib/supabase/schema.ts",
   out: "./migrations",
-  // driver: "aws-data-api",
   dbCredentials: {
     url: process.env.DATABASE_URL || "",
   },
+  verbose: true,
 });
