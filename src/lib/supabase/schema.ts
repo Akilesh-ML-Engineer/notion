@@ -28,7 +28,6 @@ export const folders = pgTable("folders", {
   inTrash: text("in_trash"),
   workspaceId: uuid("workspace_id").references(() => workspaces.id, {
     onDelete: "cascade",
-    onUpdate: "cascade",
   }),
 });
 
@@ -48,6 +47,5 @@ export const files = pgTable("files", {
   }),
   folderId: uuid("folder_id").references(() => folders.id, {
     onDelete: "cascade",
-    onUpdate: "cascade",
   }),
 });
